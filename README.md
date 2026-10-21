@@ -1,30 +1,23 @@
 # 李明辉
 
-会员数据分析 / 增长分析方向。  
-关注怎么把 Agent 做成**可信、可评测、可治理、可接入**的系统，而不只是能跑通的 demo。
+会员数据分析 / 增长分析。
 
-> Member growth analytics · building trustworthy, evaluable, governable LLM agents.
+下面几个项目是从日常工作里反复卡住的地方拆出来的：Agent 给出的结论怎么核对，指标口径为什么每个渠道算出来都不一样，评测怎么才能进 CI 而不是靠人看报告。领域用服装 / 内衣会员运营，数据全部合成。
 
 ## 作品集
 
 [Agent Portfolio · 会员增长智能体工程](https://github.com/Lilim-ing/agent-portfolio)
 
-六个可独立运行、可离线评测的 Agent 工程。领域取自服装/内衣会员运营，数据全部为合成数据。
+六个项目都能离线跑，不需要 API key。
 
-| 项目 | 一句话 | 关键机制 |
+| 项目 | 做什么 | 主要实现 |
 |---|---|---|
-| [membergraph](https://github.com/Lilim-ing/membergraph) | 会员增长多智能体工作台 | 证据账本 / Critic 回路 / 预算降级 / trace 回放 |
-| [metricguard](https://github.com/Lilim-ing/metricguard) | 指标口径守卫与可信问数网关 | 语义层 / AST 策略 / PII 拦截 / 审计 |
-| [agent-evalkit](https://github.com/Lilim-ing/agent-evalkit) | Agent 评测与回归工具包 | trace-first 断言 / bootstrap CI / flaky 检测 |
+| [membergraph](https://github.com/Lilim-ing/membergraph) | 会员增长多智能体工作台 | 黑板版本化 / 证据账本 / Critic 打回 / 预算降级 / trace 回放 |
+| [metricguard](https://github.com/Lilim-ing/metricguard) | 指标口径守卫、可信问数网关 | 语义层 YAML / sqlglot AST 策略 / PII 拦截 / 审计 |
+| [agent-evalkit](https://github.com/Lilim-ing/agent-evalkit) | Agent 评测与回归 | trace 断言 / bootstrap 置信区间 / flaky 检测 |
 | [uplift-copilot](https://github.com/Lilim-ing/uplift-copilot) | 增量建模与预算分配 | T-learner / Qini / 预算约束选人 |
-| [fitwise](https://github.com/Lilim-ing/fitwise) | 内衣尺码与穿着知识助手 | 确定性尺码 / 引用式检索 / 默认拒答 |
-| [mcp-member-ops](https://github.com/Lilim-ing/mcp-member-ops) | 会员运营 MCP 服务 | JSON-RPC / RBAC / 返回层脱敏 / 审计 |
-
-## 我关注的三件事
-
-- **结论可追溯**：每条结论挂证据，不靠 prompt 祈使句。
-- **口径可治理**：指标定义是可执行契约，不是文档里的注释。
-- **质量可证明**：断言对象是 trace，评测能进 CI 门禁。
+| [fitwise](https://github.com/Lilim-ing/fitwise) | 内衣尺码与穿着知识助手 | 确定性尺码计算 / 引用式检索 / 默认拒答 |
+| [mcp-member-ops](https://github.com/Lilim-ing/mcp-member-ops) | 会员运营 MCP 服务 | JSON-RPC / 能力级 RBAC / 返回字段脱敏 / 审计 |
 
 ## 技术栈
 
@@ -32,4 +25,4 @@ Python · SQL · DuckDB · pandas · scikit-learn · LLM Agents · MCP · GitHub
 
 ---
 
-> 所有项目使用合成数据，不含任何企业的真实数据、真实会员信息或真实口径文档。
+> 仓库数据全部合成，没有真实企业数据、会员信息或口径文档。
